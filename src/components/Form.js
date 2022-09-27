@@ -1,6 +1,13 @@
 import React from "react";
 
 class Form extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			task: ""
+		};
+	}
+
 	render() {
 		return (
 			<form class="ui form">
@@ -8,7 +15,11 @@ class Form extends React.Component {
 					<label>Task</label>
 					<input type="text" name="task" placeholder="Write your task"></input>
 				</div>
-				<button class="ui button" type="submit">
+				<button
+					class="ui button"
+					type="submit"
+					onClick={() => this.setState({ task: this.state.task })}
+				>
 					Submit
 				</button>
 			</form>
