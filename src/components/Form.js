@@ -1,30 +1,32 @@
 import React from "react";
+import { useRef } from "react";
 
-class Form extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			task: ""
-		};
+const Form = () => {
+	const inputRef = useRef(null);
+
+	function handleClick(event) {
+		event.preventDefault();
+		console.log("task is: ", inputRef.current.value);
 	}
 
-	render() {
-		return (
-			<form class="ui form">
-				<div class="field">
-					<label>Task</label>
-					<input type="text" name="task" placeholder="Write your task"></input>
-				</div>
-				<button
-					class="ui button"
-					type="submit"
-					onClick={() => this.setState({ task: this.state.task })}
-				>
-					Submit
-				</button>
-			</form>
-		);
-	}
-}
+	return (
+		<form className="ui form">
+			<div className="field">
+				<label>Task</label>
+				<input
+					ref={inputRef}
+					type="text"
+					id="task"
+					name="task"
+					placeholder="Write your task"
+				></input>
+			</div>
+			<button className="ui button" type="submit" onClick={handleClick}>
+				Submit
+			</button>
+			<p>Task:</p>
+		</form>
+	);
+};
 
 export default Form;
