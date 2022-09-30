@@ -1,30 +1,39 @@
 import React from "react";
-import { useRef } from "react";
+import { useState } from "react";
 
 const Form = () => {
-	const inputRef = useRef(null);
+	const [task, setTask] = useState("");
 
-	function handleClick(event) {
+	let tempTask;
+
+	const onChange = (event) => {
 		event.preventDefault();
-		console.log("task is: ", inputRef.current.value);
-	}
+		tempTask = event.target.value;
+	};
 
 	return (
 		<form className="ui form">
 			<div className="field">
 				<label>Task</label>
 				<input
-					ref={inputRef}
 					type="text"
 					id="task"
 					name="task"
 					placeholder="Write your task"
+					onChange={onChange}
 				></input>
 			</div>
-			<button className="ui button" type="submit" onClick={handleClick}>
+			<button
+				className="ui button"
+				type="submit"
+				onClick={(e) => {
+					e.preventDefault();
+					setTask(tempTask);
+				}}
+			>
 				Submit
 			</button>
-			<p>Task:</p>
+			<p>Task: {task}</p>
 		</form>
 	);
 };
