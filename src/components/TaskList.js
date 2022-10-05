@@ -13,6 +13,11 @@ const TaskList = (props) => {
 		setList(updateList);
 	};
 
+	const onClickRemove = (e) => {
+		const updateList = list.filter((item) => !item.done);
+		setList(updateList);
+	};
+
 	const check = list.map((item) => (
 		<Checkbox onChange={onChange} key={item.id} data={item} />
 	));
@@ -22,11 +27,11 @@ const TaskList = (props) => {
 			{list.length ? check : "There are no tasks yet"}
 			{list.length ? (
 				<p>
-					<button className="ui button">Delete completed tasks</button>
+					<button className="ui button" onClick={onClickRemove}>
+						Delete completed tasks
+					</button>
 				</p>
 			) : null}
-			<div>TaskList works</div>
-			<Checkbox />
 		</div>
 	);
 };
