@@ -1,13 +1,10 @@
 import React from "react";
+import "./App.scss";
 import Container from "./components/Container";
 
 class App extends React.Component {
 	render() {
-		return (
-			<div className="ui container">
-				<Container />
-			</div>
-		);
+		return <Container />;
 	}
 }
 

@@ -10,7 +10,7 @@ const Checkbox = (props) => {
 		<>
 			<div className="ui checkbox">
 				<input
-					className=" todo__state"
+					className=" todo state"
 					name={id}
 					type="checkbox"
 					defaultChecked={done}

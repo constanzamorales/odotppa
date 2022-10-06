@@ -12,8 +12,7 @@ const Container = () => {
 	};
 
 	return (
-		<div>
-			Container works!
+		<div className="container">
 			<Form handleAddItem={handleAddItem} />
 			<TaskList list={list} setList={setList} />
 		</div>
