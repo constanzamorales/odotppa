@@ -17,7 +17,7 @@ const Form = (props) => {
 	};
 
 	return (
-		<form className="ui form" onSubmit={handleSubmit}>
+		<form className="form" onSubmit={handleSubmit}>
 			<div className="field">
 				<label>Write your task</label>
 				<input
@@ -29,9 +29,7 @@ const Form = (props) => {
 					onChange={(e) => setTask(e.target.value)}
 				></input>
 			</div>
-			<button className="ui button" disabled={task ? "" : "disabled"}>
-				Submit
-			</button>
+			<button disabled={task ? "" : "disabled"}>Submit</button>
 		</form>
 	);
 };

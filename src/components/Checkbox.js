@@ -8,9 +8,9 @@ const Checkbox = (props) => {
 
 	return (
 		<>
-			<div className="ui checkbox">
+			<div>
 				<input
-					className=" todo state"
+					className="checkbox"
 					name={id}
 					type="checkbox"
 					defaultChecked={done}

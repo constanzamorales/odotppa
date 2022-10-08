@@ -13,6 +13,7 @@ const Container = () => {
 
 	return (
 		<div className="container">
+			<h1 className="title">Todo App</h1>
 			<Form handleAddItem={handleAddItem} />
 			<TaskList list={list} setList={setList} />
 		</div>

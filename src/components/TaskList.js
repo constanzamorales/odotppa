@@ -24,10 +24,11 @@ const TaskList = (props) => {
 
 	return (
 		<div className="todo-list">
+			<h5>To-do</h5>
 			{list.length ? check : "There are no tasks yet"}
 			{list.length ? (
 				<p>
-					<button className="ui button" onClick={onClickRemove}>
+					<button className="delete-btn" onClick={onClickRemove}>
 						Delete completed tasks
 					</button>
 				</p>
