@@ -27,11 +27,9 @@ const TaskList = (props) => {
 			<h5>To-do</h5>
 			{list.length ? check : "There are no tasks yet"}
 			{list.length ? (
-				<p>
-					<button className="delete-btn" onClick={onClickRemove}>
-						Delete completed tasks
-					</button>
-				</p>
+				<button className="delete-btn" onClick={onClickRemove}>
+					Delete completed tasks
+				</button>
 			) : null}
 		</div>
 	);

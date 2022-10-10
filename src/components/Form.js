@@ -29,7 +29,9 @@ const Form = (props) => {
 					onChange={(e) => setTask(e.target.value)}
 				></input>
 			</div>
-			<button disabled={task ? "" : "disabled"}>Submit</button>
+			<button className="submit-btn" disabled={task ? "" : "disabled"}>
+				Submit
+			</button>
 		</form>
 	);
 };

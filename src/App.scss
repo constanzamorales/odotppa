@@ -21,7 +21,7 @@ h5 {
 	width: 100%;
 	padding: 20px;
 	border-radius: 16px;
-	border: 1px solid #e0e4cc;
+	border: 1px solid #00a8ff;
 }
 
 .title {
@@ -47,26 +47,34 @@ input {
 	border: 1px solid black;
 }
 
-button {
-	background: #fa6900;
+.submit-btn,
+.delete-btn {
 	margin: 16px 0;
 	padding: 12px;
-	color: white;
+	color: #f5f6fa;
 	border-radius: 24px;
 	border: none;
 }
 
+.submit-btn {
+	background: #fa6900;
+}
+
+.submit-btn[disabled] {
+	background: #dcdde1;
+}
+
+.delete-btn {
+	width: 100%;
+	background: #00a8ff;
+}
+
 .todo-list {
 	padding: 16px;
-	border: 1px solid #e0e4cc;
+	border: 1px solid #dcdde1;
 	border-radius: 8px;
 }
 
 .checkbox {
 	margin-right: 8px;
-}
-
-.delete-btn {
-	width: 100%;
-	background: #69d2e7;
 }
